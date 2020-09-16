@@ -29,7 +29,7 @@ class Meta:
 
 class Document:
     index = 1
-
+    page_index = 1
     DOC_TYPES = {'html': 0, 'md': 1, 'markdown': 1}
     DEFAULT_TYPE = DOC_TYPES.get('html', 0)
 
@@ -48,9 +48,9 @@ class Document:
                 index += 1
 
     @classmethod
-    def item2html(cls, cont, meta):
+    def item2html(cls, idx, cont, meta):
         mushroom = html.Mushroom(cont, meta, css_output=config.get_setting('running/css_output'))
-        with open(format_file_name('html', meta.title, str(meta.voteup), meta.author), 'w',
+        with open(format_file_name('html', meta.title, str(idx), str(meta.voteup), meta.author), 'w',
                   encoding='utf8') as foo:
             # 写入文件
             mushroom.write_down(foo)
@@ -77,10 +77,10 @@ class Document:
             return
 
         if config.get_setting('running/file_type') == cls.DEFAULT_TYPE:
-            doc = cls.item2html(cont, meta)
+            doc = cls.item2html(cls.page_index, cont, meta)
         else:
             doc = cls.item2md(cont, meta)
-
+        cls.page_index += 1
         cls.show_info(meta)
 
         if config.get_setting('running/download_image'):

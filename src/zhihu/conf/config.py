@@ -17,7 +17,7 @@ config = {
              'collection_meta': 'https://api.zhihu.com/collections/{item_id}',
              'SORT_BY_VOT': 'voteups',
              'SORT_BY_DEF': 'default',
-             'SORT_BY_DAT': 'created',
+             'SORT_BY_DAT': 'updated',
              'PLATFORM': 'desktop',
              },
          'ColumnManage': {

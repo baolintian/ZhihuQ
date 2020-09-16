@@ -100,11 +100,19 @@ class API:
         :param kwargs: offset, limit, sort_by
         :return: str, url
         """
+        
+        if kwargs['sort_method'] == 0:
+            sort_by = cls.SORT_BY_VOT
+        elif kwargs['sort_method'] == 1:
+            sort_by =  cls.SORT_BY_DAT
+        else:
+            sort_by = cls.SORT_BY_DEF
+
         params = {
             'item_id': item_id,
             'offset': 0,
             'limit': 20,
-            'sort_by': cls.SORT_BY_VOT
+            'sort_by': sort_by
         }
         params.update(kwargs) # 讲kwargs中的变量全部都映射给params
         return cls.api.get(item_name, '').format(**params)

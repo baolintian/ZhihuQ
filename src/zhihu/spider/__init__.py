@@ -24,13 +24,13 @@ def load_function(name):
 
 
 @HandleError.catch_error
-def start_with_id(item_id, item_type):
-    load_function(item_type)(item_id)
+def start_with_id(item_id, item_type, filter, sort_method, ratio):
+    load_function(item_type)(item_id, filter, sort_method, ratio)
     print('保存目录：%s' % config.wh())
 
 
-def start(item_link):
-    start_with_id(*parse_url(item_link))
+def start(item_link, filter, sort_method, ratio):
+    start_with_id(*parse_url(item_link), filter, sort_method, ratio)
 
 
 def parse_url(item_link):
