@@ -1,0 +1,269 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body { 
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  background-color: #f6f6f6;
+  font-family: "PT Serif", "Times New Roman", Times, serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(31, 9, 9);
+}
+
+.article {
+  max-width: 50em;
+  margin: 0px auto;
+  padding: 6em;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: inherit;
+}
+
+p img[eeimg]{
+  display: inline-block;
+  margin: 0 3px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+p + ul,
+p + ol {
+  margin-top: 0.5em;
+}
+
+blockquote {
+  margin: 0 2em;
+  background: #eee;
+  border-radius: 5px;
+  padding: 15px;
+  color: rgb(101, 101, 101);
+  font-style: italic;
+}
+
+blockquote p {
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+blockquote ul,
+blockquote ol {
+  margin-left: 0px;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+blockquote > :first-child,
+li > :first-child {
+  margin-top: 0px;
+}
+blockquote > :last-child {
+  margin-bottom: 0px;
+}
+blockquote,
+q {
+  quotes: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #3ac19f;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #ff6188;
+  outline: 0px;
+}
+a.url {
+  word-break: break-all;
+}
+
+table tr th {
+  border-bottom: 0px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin-bottom: 1.5em;
+  font-size: 1em;
+  width: 100%;
+  overflow: auto;
+  break-inside: auto;
+  text-align: left;
+}
+
+header,
+footer {
+  font-family: "PT Serif", "Times New Roman", Times, serif;
+  color: rgb(31, 9, 9);
+}
+thead {
+  background-color: rgb(218, 218, 218);
+  display: table-header-group;
+}
+
+thead th,
+tfoot th {
+  padding: 0.25em 0.25em 0.25em 0.4em;
+  text-transform: uppercase;
+}
+
+tr {
+  break-inside: avoid;
+  break-after: auto;
+}
+
+tr:nth-child(2n) {
+  background: rgb(232, 231, 231);
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  vertical-align: top;
+  padding: 0.25em 0.25em 0.25em 0.4em;
+}
+
+tt {
+  font-size: 0.8em;
+  line-height: 1.7em;
+}
+
+ol,
+ul {
+  text-indent: 0;
+  position: relative;
+  list-style: none;
+  margin: 0px 0px 1.5em 1.5em;
+}
+ol li {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+ul li {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+li div {
+  padding-top: 0px;
+}
+
+li {
+  margin: 0px;
+  margin-left: 2em;
+  position: relative;
+}
+li > figure:last-child {
+  margin-bottom: 0.5rem;
+}
+
+li > :first-child {
+  margin-top: 0px;
+}
+
+li > ul,
+li > ol {
+  margin-top: inherit;
+  margin-bottom: 0px;
+}
+
+li ol > li {
+  list-style-type: lower-alpha;
+}
+
+li li ol > li {
+  list-style-type: lower-roman;
+}
+
+kbd {
+  margin: 0px 0.1em;
+  padding: 0.1em 0.6em;
+  font-size: 0.8em;
+  color: rgb(36, 39, 41);
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(173, 179, 185);
+  border-radius: 3px;
+  box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px,
+    rgb(255, 255, 255) 0px 0px 0px 2px inset;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+samp,
+tt {
+  font-family: var(--monospace);
+}
+
+hr {
+  border-bottom: 1px solid #d6d6d6;
+  margin-inline-start: 15%;
+  margin-inline-end: 15%;
+  margin-block-start: 5rem;
+  margin-block-end: 5rem;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px dashed #f40;
+}
+
+figure {
+  margin: 2em auto;
+  max-width: 100%;
+  padding: 0px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+figure img {
+  display: block;
+  max-width: 60%;
+  margin: auto;
+}
+
+figure figcaption {
+  padding: 0 1em;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+figure > table {
+  margin: 0px !important;
+}
+
+div.hr:focus {
+  cursor: none;
+}
+
+a img,
+img a {
+  cursor: pointer;
+}

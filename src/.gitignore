@@ -1,0 +1,12 @@
+## file
+NewConcourse.py
+
+
+## dir
+build/
+data/
+development/
+dist/
+__pycache__/
+.idea/
+Zhihu_Spider.egg-info/
