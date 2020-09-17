@@ -1,3 +1,4 @@
+# coding=utf-8
 config = {
          'API': {
              'host': 'https://www.zhihu.com',

@@ -1,4 +1,5 @@
 #!flask/bin/python
+# coding=utf-8
 from flask import Flask, jsonify
 import spider
 app = Flask(__name__)

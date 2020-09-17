@@ -1,7 +1,9 @@
+# coding=utf-8
+
 import os
 import pickle
 
-import zhihu.conf.config as zcc
+from zhihu.conf import config
 
 __all__ = ['config']
 
@@ -10,7 +12,7 @@ class Config:
     """程序配置信息"""
 
     def __init__(self):
-        self.config = zcc.config
+        self.config = config.config
         self.root_warehouse = self.default_wh()
 
     def save(self, file):
