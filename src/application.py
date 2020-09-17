@@ -1,6 +1,6 @@
 #!flask/bin/python
+# coding=utf-8
 from flask import Flask, jsonify, make_response
-import run
 import zhihu.spider
 import test
 from zhihu.conf import config

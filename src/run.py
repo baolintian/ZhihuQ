@@ -15,7 +15,7 @@ config.setting('running/download_image', False)
 config.setting('running/cover', False)
 
 # 问题id, 关键词的过滤, 排序方式, 索引的比重
-zhihu.spider.start(r'https://www.zhihu.com/question/315892524', '', 1, 0.01)
+# zhihu.spider.start(r'https://www.zhihu.com/question/315892524', '', 1, 0.01)
 
 # ### 启动爬虫 #### #
 
