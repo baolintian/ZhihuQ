@@ -3,6 +3,7 @@
 from flask import Flask, jsonify, make_response
 import zhihu.spider
 import test
+import run
 from zhihu.conf import config
 app = Flask(__name__)
 
@@ -25,4 +26,4 @@ def api(varargs=None):
     # And now it is a list of strings
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
