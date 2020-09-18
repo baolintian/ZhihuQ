@@ -122,10 +122,9 @@ def HasKeywords(answer_detail,keyword):   #判断是否含有所有关键词
         flag2=False
         # 需要讲所有的关键词都找到
         for sub_key in key.split('+'):
-            flag2=flag2 or answer_detail.find(sub_key)>0
+            flag2=answer_detail.find(sub_key)>0
             if flag2 == False:
                 break
-            flag2 = False
         flag=flag and flag2
         if not flag:
             return False
