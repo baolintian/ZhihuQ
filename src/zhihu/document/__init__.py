@@ -50,7 +50,7 @@ class Document:
     @classmethod
     def item2html(cls, idx, cont, meta):
         mushroom = html.Mushroom(cont, meta, css_output=config.get_setting('running/css_output'))
-        with open(format_file_name('html', meta.title, str(idx), str(meta.voteup), meta.author), 'w',
+        with open(format_file_name('html', '%04d'%idx, meta.title, str(meta.voteup), meta.author), 'w',
                   encoding='utf8') as foo:
             # 写入文件
             mushroom.write_down(foo)

@@ -27,7 +27,7 @@ def merge_file(directory):
                     content += lines[i]
                     # outfile.write(lines[i])
             f.close()
-            # os.remove("./"+directory+"/"+item)
+            os.remove("./"+directory+"/"+item)
 
     # outfile.write(r"    </body>")
     content += r"    </body>"
