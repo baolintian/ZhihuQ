@@ -16,7 +16,7 @@ def merge_file(directory):
     for item in files:
         with open("./"+directory+"/"+item, 'r', encoding='utf8') as f:
             lines = f.readlines()
-            
+            print("./"+directory+"/"+item)
             if get_flag == False:
                 for i in range(0, len(lines)-2):
                     # outfile.write(lines[i])
