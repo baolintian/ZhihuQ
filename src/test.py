@@ -9,6 +9,7 @@ def merge_file(directory):
 
     content = ''
     files = file_name('./'+directory)
+    files = sorted(files)
     get_flag = False
     real_name = re.split('\\\\', directory)[-1]
     # outfile = open("./merge_result/question/"+real_name+".html", "w+", encoding='utf8')
